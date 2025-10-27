@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #f7f9fc;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+header.shrink {
+  padding: 5px 0;
+  background: #fff;
+}
+
+header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-weight: 700;
+  color: #002147;
+  font-size: 1.3em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #002147;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,33,71,0.6), rgba(0,33,71,0.6)), url('https://picsum.photos/1600/900?campus') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero h2 span {
+  color: #ffcc00;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #ffcc00;
+  color: #002147;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #fff;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1100px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #002147;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: #002147;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ANIMASI FADE-IN */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TOMBOL KE ATAS */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffcc00;
+  color: #002147;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  background-color: #fff;
+  color: #002147;
+}
